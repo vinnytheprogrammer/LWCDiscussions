@@ -1,0 +1,39 @@
+<template>
+    <lightning-card  onclick={handleClick}> 
+       <div class="greeting-class">HELLO {cars}</div>  
+       <lightning-input label = "Greeting" onkeypress = {handleInput} ></lightning-input>
+       <template if:true = {flag}>
+            <div>
+                <img src="/img/samples/light_green.gif"/>
+            </div>
+
+       </template>
+
+       <template if:false = {flag}>
+        <div>
+            <img src="/img/samples/light_red.gif"/>
+        </div>
+   
+   </template>
+
+   <lightning-button label = {buttonLabel}       onclick={handleFlag} > </lightning-button>
+
+   <!-- <template for:each={carMap} for:item = 'car'>
+    
+    <p key =  {car.key}>
+        <lightning-card title={car.key} >  <img src ={car.value} > </lightning-card> </p>
+     
+        
+   </template> -->
+   <template iterator:it={carMap}>
+    <p key =  {it.value.key}>
+        <lightning-card title={it.value.key} > 
+             <img src ={it.value.value} width="500" height="500" > 
+        </lightning-card>
+    </p>
+
+   </template>
+
+    </lightning-card>
+
+</template>
