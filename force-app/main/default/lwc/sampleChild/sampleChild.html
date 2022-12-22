@@ -1,0 +1,22 @@
+<template>
+    <lightning-card>
+        <div>
+            <header>This is a Child Component</header>
+            <lightning-combobox
+                name="CarModel"
+                label="Car Model"
+                value = {value}
+                placeholder="Select a Car Model"
+                options={options}
+                onchange={handleChange} ></lightning-combobox>
+            
+            <template if:true = {named}>
+                <slot name="sampleSlot"></slot>
+            </template>
+            <template if:false = {named}>
+                <slot></slot>
+            </template>
+        </div>
+    </lightning-card>
+    
+</template>

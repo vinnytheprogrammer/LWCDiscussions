@@ -1,0 +1,12 @@
+<template>
+    <lightning-card>
+        <div>
+            <Header>This is the Parent Component</Header>
+            <c-sample-child named = {parentNamed} oncarselected = {handleCarSelected}>
+                <p slot = 'sampleSlot'> This is a named slot Markup </p>
+                <p>This is unnamed slot markup </p>
+            
+            </c-sample-child>
+        </div>
+    </lightning-card>
+</template>
