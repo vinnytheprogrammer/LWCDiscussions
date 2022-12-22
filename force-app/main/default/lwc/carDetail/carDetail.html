@@ -1,0 +1,10 @@
+<template>
+    <Lightning-card title = "Detail"> 
+            <div>{product.fields.Name.value}</div>
+            <div class="price">{product.fields.MSRP__c.displayValue}</div>
+            <div class="description">{product.fields.Description__c.value}</div>
+            <img class="product-img" src={product.fields.Picture_URL__c.value}></img>
+        
+    </Lightning-card>
+
+</template>
