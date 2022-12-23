@@ -10,12 +10,10 @@
                 options={options}
                 onchange={handleChange} ></lightning-combobox>
             
-            <template if:true = {named}>
-                <slot name="sampleSlot"></slot>
-            </template>
-            <template if:false = {named}>
-                <slot></slot>
-            </template>
+            
+                <slot name = "cars"></slot>
+            
+            
         </div>
     </lightning-card>
     
