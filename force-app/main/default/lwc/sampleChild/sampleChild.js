@@ -17,6 +17,7 @@ export default class SampleChild extends LightningElement {
 
     handleChange(event){
         this.value = event.target.value;
+        //console.log(this.value);
         this.dispatchEvent(new CustomEvent('carselected', {detail : this.value})); 
     }
 

@@ -2,9 +2,15 @@
     <lightning-card>
         <div>
             <Header>This is the Parent Component</Header>
-            <c-sample-child named = {parentNamed} oncarselected = {handleCarSelected}>
-                <p slot = 'sampleSlot'> This is a named slot Markup </p>
-                <p>This is unnamed slot markup </p>
+            <c-sample-child  oncarselected = {handleCarSelected}>
+                
+                <p slot = "cars">
+                    
+                <lightning-card title={carName} > 
+                        <img src ={getCarDetail} width="500" height="500" > 
+                </lightning-card>                   
+            
+                </p>
             
             </c-sample-child>
         </div>
