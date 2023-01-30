@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title = "Input Account Details">
+        <lightning-layout>
+            <lightning-layout-item  size = "6" padding = "around-small">
+                <lightning-card title = "Create a new Account">
+                    <lightning-input name="Account Name " label= "Name" onchange={AccountNameHandler}></lightning-input>
+                    <lightning-input name="Account Phone " type = "phone" label= "Phone" onchange={AccountPhoneHandler}></lightning-input>
+                    <lightning-input name="Account Website " type = "url" label= "Site" onchange={AccountWebsiteHandler}></lightning-input>
+                    <lightning-input name="Number of employees "  type = "number" label= "No of employees" onchange= {AccountEmpHandler}></lightning-input>
+
+                    
+
+                    
+                </lightning-card>
+
+                <lightning-button label = "Create Account"  onclick = {createAccount}></lightning-button>
+
+            </lightning-layout-item>
+            
+            <lightning-layout-item  size = "6" padding = "around-small">
+
+                <lightning-card title = " View  New Account">
+                    <p><lightning-formatted-text   value={retAccountName} ></lightning-formatted-text></p>
+                    <p><lightning-formatted-phone  value ={retAccountPhone}></lightning-formatted-phone></p>
+                    <p><lightning-formatted-url    value ={retAccountWebsite}></lightning-formatted-url></p>
+                    <p><lightning-formatted-number value = {retAccountEmployees}></lightning-formatted-number></p>
+
+
+
+                
+                </lightning-card>
+    
+
+            </lightning-layout-item>
+
+        </lightning-layout>
+    </lightning-card>
+</template>
